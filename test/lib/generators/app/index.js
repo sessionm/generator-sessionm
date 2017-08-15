@@ -34,11 +34,20 @@ describe("AppGenerator", function(){
     context("when exception is raised", function(){
       before(function(done) {
 	generator.composeWith = sinon.stub().throws();
+	generator.log = sinon.stub();
 	done()
       })
+
       it("returns nil", function(done) {
 	expect(generator._generateItem(item)).to.be.undefined;
       	done()
+      })
+
+      it("calls log", function(done) {
+	generator._generateItem(item)
+
+      	expect(generator.log).to.be.called
+	done()
       })
     })
 
