@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- node
+deploy:
+  provider: npm
+  email: pygeek@me.com
+  api_key:
+    secure: MDFups9oDREygm9HlWIb9xjKB2OIWqFFOceV2IZsz38rLnFiw66NPLXRX6zm0ZErDN0WwHqsaHseMY5kHYx8f+YYspHW648Fwb12+J+G1YnbrIwmB5NU4D3km0kDSu+fORr8/I6VfaMSg9xrTpiIbRN42LA75gCjkY8aSkoiG9hWuFXtd4AASzijehPNfq7fX0zcOiWJ59p5B+WqH1Qu55MX/0qLTrvMcz2oMA9GnNz0tLecBSAhUL9uLxtVSf3rxZYnduPz+CcX5qfhj5Me3azksXauC92i5OOgkS/d+sMmRjswjhPebm9kEMPPc6N+gzApC5Mjhm7Y5Y3QLG1hnCORDHOw8MiGgy79KZn4zHCD2Fu+x3ffbL1Ncy2oLFoCWFhUSk9VUtfQKNfr/XiPfNsU4RtkgSlm7UrEOppskOFDVLsOprUzRpAMIH/W63bqyvUoOqVCz4lPC3HGB73OvVEjQnsFR4oEiKdAnYUcXeb0DFbimnbbAPXbSV3d0eaXRXJgxndZxZ5T4GAigVNCDf0dadZBXwk7volpgAwnTrwDa7dHnAzb8jICJLPwbWYmiZqYpzM0OXbQ1bcXi4wuOmfxBHUnIvnt8HVDx07Yn5+VpIUcM9dVUGcGeOCjuu7/Ur3p2hXFfIaDH2/sd+QL4gs/cyiT9kLbDq84h0HPqog=
+  on:
+    repo: sessionm/generator-sessionm
