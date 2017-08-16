@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - "node"
+- node
+deploy:
+  provider: npm
+  email: pygeek@users.noreply.github.com
+  api_key:
+    secure: DC00OGEezvwaOjntERxS4spVnDkOn+KqFQ6/haRWJbhud2W3Cmq1ckFfeCqzbAHc/prshph77TfHSC4N4Emh0NfFj+keBENFxbe0QkCliwaigvjkIwTqDXDf3WCzPa7gwUIYpr36ndY3vaO28cvg/G02qLrilwsy22BhpuE3r0sULSpIQL+jP67cTEHIGUMV/owJrTuj1FwO8XZ1lWz9VSCNIrnqOIJimxG1Srk9IjNtey5OaIxoTzdivSBV5t2XmLNxoWDWA8uXJG11vFN4jnURIRTPfsCB0u0ar2xQcWrP5MLLUG+na6QFM3lXkmAis78BEmeSJlg40io4sSFgQQJWyp+7S/fM7uFZYo229GfcHhpc3y7Uffce6CaumC9D58adVoLnLCr6plBFqQTT3TZOk56qO/fplfpS63/wDyLWXo3HEyR8vvgcM0m0wM9Y7QqZsJ0U244J+lS583lB9i7uZlG+pIFm3Bg0KlfPpPglyL2pD3oCeD5LNtYrebN/Vuz+zllxIuZUeLkqUnikTDM3pQbqM0LBtNVb46EHIaQFlnkf4bVF/Y4/7BEWN2eBqL5NaSuZ4WnnPYNAb5oZ/KWB6ST232Xt6e/Jz/YBnLrNGjwp7R+JPt9ipSIgfuxgOeoATnmDK9EvMHb8BvWy13lkZlWqKcV2KT6VX3Fu+qU=
+  on:
+    tags: true
+    repo: sessionm/generator-sessionm
