@@ -1,6 +1,6 @@
 {
   "name": "generator-sessionm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Initializes a SessionM application.",
   "scripts": {
     "clean": "rm -rf ./lib && mkdir lib",
