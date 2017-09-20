@@ -1,4 +1,4 @@
-import AppGenerator from "../../../../lib/generators/app";
+import AppGenerator from "../../../../src/generators/app";
 
 
 describe("AppGenerator", function(){
@@ -23,7 +23,7 @@ describe("AppGenerator", function(){
 
       done()
     })
-    
+
     it("calls .composeWith with the correct args", function(done){
       generator._generateItem(item);
 
@@ -33,21 +33,21 @@ describe("AppGenerator", function(){
 
     context("when exception is raised", function(){
       before(function(done) {
-	generator.composeWith = sinon.stub().throws();
-	generator.log = sinon.stub();
-	done()
+        generator.composeWith = sinon.stub().throws();
+        generator.log = sinon.stub();
+        done()
       })
 
       it("returns nil", function(done) {
-	expect(generator._generateItem(item)).to.be.undefined;
-      	done()
+        expect(generator._generateItem(item)).to.be.undefined;
+        done()
       })
 
       it("calls log", function(done) {
-	generator._generateItem(item)
+        generator._generateItem(item)
 
-      	expect(generator.log).to.be.called
-	done()
+        expect(generator.log).to.be.called
+        done()
       })
     })
 
@@ -55,14 +55,14 @@ describe("AppGenerator", function(){
       let composeWithStub;
 
       before(function(done){
-	composeWithStub = sinon.stub();
-	generator.composeWith = sinon.stub().returns(composeWithStub);
+        composeWithStub = sinon.stub();
+        generator.composeWith = sinon.stub().returns(composeWithStub);
         done()
       })
 
       it("returns the correct value", function(done) {
-	expect(generator._generateItem(item)).to.equal(composeWithStub);
-      	done()
+        expect(generator._generateItem(item)).to.equal(composeWithStub);
+        done()
       })
     })
   })
@@ -91,7 +91,6 @@ describe("AppGenerator", function(){
       generator.initializing.restore()
 
       generator._generateAll = sinon.stub();
-
       done()
     })
 
