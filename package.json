@@ -1,15 +1,17 @@
 {
   "name": "generator-sessionm",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "Initializes a SessionM application.",
   "scripts": {
-    "clean": "rm -rf ./dist && mkdir dist",
-    "build": "npm run clean && node_modules/babel-cli/bin/babel.js lib/generators --out-dir ./dist --copy-files",
+    "clean": "rm -rf ./lib && mkdir lib",
+    "build": "npm run clean && node_modules/babel-cli/bin/babel.js src --out-dir ./lib --copy-files",
+    "prepublish": "npm run build",
     "test": "NODE_ENV=test ./node_modules/nyc/bin/nyc.js ./node_modules/mocha/bin/mocha --opts .mocharc --colors",
-    "test:tdd": "npm test -- --watch"
+    "test:tdd": "npm test -- --watch",
+    "main": "lib"
   },
   "files": [
-    "generators"
+    "lib"
   ],
   "babel": {
     "env": {
@@ -33,7 +35,7 @@
     ],
     "exclude": [
       "**/templates/*",
-      "dist",
+      "lib",
       "test"
     ],
     "all": true
